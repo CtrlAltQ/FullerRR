@@ -382,7 +382,7 @@ function initFormHandling() {
         const data = Object.fromEntries(formData);
         
         // Basic validation
-        const requiredFields = ['fullName', 'email', 'phone', 'project'];
+        const requiredFields = ['fullName', 'email', 'phone'];
         let isValid = true;
         
         requiredFields.forEach(field => {
