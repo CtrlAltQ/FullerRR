@@ -479,6 +479,16 @@ p {
     margin: 0;
 }
 
+.projects-completed-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.projects-completed-link:hover {
+    transform: translateY(-3px);
+}
+
 .projects-completed {
     text-align: center;
     padding: 1.5rem;
@@ -486,17 +496,38 @@ p {
     color: white;
     border-radius: 15px;
     margin-top: 1rem;
+    transition: box-shadow 0.3s ease;
 }
 
-.projects-completed strong {
+.projects-completed-link:hover .projects-completed {
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
+}
+
+.follow-text {
     display: block;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    opacity: 0.9;
 }
 
-.projects-completed span {
-    font-size: 0.9rem;
-    opacity: 0.9;
+.logo-facebook-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.facebook-logo {
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.logo-facebook-container i {
+    color: white;
+    font-size: 2rem;
 }
 
 /* Services Section */
@@ -959,6 +990,7 @@ p {
     color: #b0b0b0;
     font-style: italic;
 }
+
 
 /* Service Area Section */
 .service-area {
