@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bathroom Renovations - Fuller Restoration & Renovation</title>
+    <meta name="description" content="Create your personal spa retreat with Fuller Restoration & Renovation. Updated fixtures, tile work, and efficient layouts. Quality craftsmanship in Middle Tennessee.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link rel="icon" href="../logos/fullercircle.png" type="image/png">
+    <style>
+        /* Service Page Specific Styles */
+        .service-page {
+            padding: 120px 0 80px;
+            background-color: #f8f9fa;
+        }
+        
+        .service-page h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        
+        .service-page-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #2c3e50;
+            transform: translateX(-5px);
+        }
+        
+        .service-hero {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .service-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .service-hero-overlay h2 {
+            color: white;
+            font-size: 2.5rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-hero-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-description h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .service-description p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-benefits {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-benefits h3 {
+            color: #c0392b;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-item i {
+            color: #c0392b;
+            font-size: 1.3rem;
+            margin-top: 0.2rem;
+        }
+        
+        .benefit-item div h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-item div p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .service-process {
+            margin-bottom: 4rem;
+        }
+        
+        .service-process h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #c0392b;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .process-step h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .process-step p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .project-examples {
+            margin-bottom: 4rem;
+        }
+        
+        .project-examples h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .example-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .example-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .example-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .example-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .example-item:hover .example-image img {
+            transform: scale(1.05);
+        }
+        
+        .example-caption {
+            padding: 1.5rem;
+            background: white;
+        }
+        
+        .example-caption h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .example-caption p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary {
+            background: white;
+            color: #c0392b;
+        }
+        
+        .cta-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        
+        .faq-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-hero {
+                height: 300px;
+            }
+            
+            .service-hero-overlay h2 {
+                font-size: 2rem;
+            }
+            
+            .service-hero-overlay p {
+                font-size: 1.1rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../logos/fullercircle.png" alt="Fuller Restoration & Renovation" class="logo">
+                <div class="nav-text-logo">
+                    <span class="nav-company-name">Fuller Restoration</span>
+                    <span class="nav-company-tagline">& Renovation</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#services" class="nav-link active">Services</a>
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+                <a href="../index.html#contact" class="nav-link cta-nav">Free Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Page Content -->
+    <section class="service-page">
+        <div class="container">
+            <h1>Bathroom Renovations</h1>
+            <p class="service-page-subtitle">Create your personal spa retreat with updated fixtures, tile work, and efficient layouts</p>
+            
+            <div class="back-to-home">
+                <a href="../index.html#services" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </a>
+            </div>
+            
+            <!-- Service Hero -->
+            <div class="service-hero">
+                <img src="../projects/bathroomafter.jpg" alt="Bathroom renovation by Fuller Restoration & Renovation">
+                <div class="service-hero-overlay">
+                    <h2>Transform Your Bathroom</h2>
+                    <p>From simple updates to complete remodels, we create beautiful, functional bathrooms tailored to your lifestyle.</p>
+                </div>
+            </div>
+            
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-description">
+                    <h2>Bathroom Renovation Services</h2>
+                    <p>Your bathroom should be more than just functional—it should be a personal retreat where you can relax and rejuvenate. At Fuller Restoration & Renovation, we specialize in creating bathrooms that combine beauty, comfort, and practicality.</p>
+                    
+                    <p>Our comprehensive bathroom renovation services range from simple fixture updates to complete transformations. Whether you're looking to refresh your space with new tile and fixtures or completely redesign your bathroom with a custom shower, soaking tub, and premium vanities, our experienced team will bring your vision to life.</p>
+                    
+                    <p>We understand that bathrooms present unique challenges, from plumbing and electrical considerations to moisture control and ventilation. Our expertise in these areas ensures that your renovation not only looks beautiful but also functions flawlessly and stands the test of time.</p>
+                    
+                    <p>With over 15 years of experience renovating bathrooms across Middle Tennessee, we have the knowledge and skills to handle projects of any size and complexity. We work efficiently to minimize disruption to your daily routine while delivering exceptional results that exceed your expectations.</p>
+                </div>
+                
+                <div class="service-benefits">
+                    <h3>Benefits of Bathroom Renovation</h3>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>Increased Home Value</h4>
+                            <p>A well-designed bathroom renovation typically returns 60-70% of its cost when selling your home.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <h4>Improved Water Efficiency</h4>
+                            <p>Modern fixtures can reduce water usage by up to 30%, lowering your utility bills.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-bath"></i>
+                        <div>
+                            <h4>Enhanced Comfort</h4>
+                            <p>Create a spa-like retreat with luxury features like rainfall showers, soaking tubs, and heated floors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-universal-access"></i>
+                        <div>
+                            <h4>Improved Accessibility</h4>
+                            <p>Incorporate aging-in-place features for safety and convenience for all family members.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Mold & Moisture Prevention</h4>
+                            <p>Updated materials and proper ventilation help prevent mold and water damage issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Process -->
+            <div class="service-process">
+                <h2>Our Bathroom Renovation Process</h2>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Initial Consultation</h4>
+                        <p>We meet to discuss your vision, needs, budget, and timeline. This helps us understand your goals and provide a preliminary estimate.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Design & Planning</h4>
+                        <p>Our team creates detailed designs for your bathroom renovation, including fixture selections, tile choices, and layout options.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Proposal & Contract</h4>
+                        <p>We provide a comprehensive proposal with detailed pricing and timeline. Once approved, we finalize the contract and schedule.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Demolition & Preparation</h4>
+                        <p>We carefully remove existing fixtures and finishes, address any hidden issues, and prepare the space for new installation.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Construction & Installation</h4>
+                        <p>Our skilled craftsmen execute the renovation according to plan, including plumbing, electrical, tile work, fixtures, and finishes.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4>Final Inspection & Walkthrough</h4>
+                        <p>We conduct a thorough inspection and walkthrough with you to ensure everything meets our high standards and your expectations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Examples -->
+            <div class="project-examples">
+                <h2>Recent Bathroom Renovation Projects</h2>
+                
+                <div class="examples-grid">
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/bathroom.jpg" alt="Modern bathroom renovation">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Modern Master Bathroom</h4>
+                            <p>Complete renovation featuring a walk-in shower, freestanding tub, and custom vanity in Spring Hill, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/bathroomafter.jpg" alt="Guest bathroom renovation">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Guest Bathroom Update</h4>
+                            <p>Refresh with new tile, vanity, and fixtures while maintaining the original layout in Columbia, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/stainedglasswindow.jpg" alt="Bathroom with stained glass window">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Historic Home Bathroom</h4>
+                            <p>Renovation preserving historic elements like the stained glass window while updating functionality in Franklin, TN.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Transform Your Bathroom?</h2>
+                <p>Contact us today to schedule your free consultation and estimate. Let's create a bathroom that combines beauty, comfort, and functionality.</p>
+                
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="cta-btn cta-primary">Get Your Free Estimate</a>
+                    <a href="../gallery.html" class="cta-btn cta-secondary">View More Projects</a>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does a typical bathroom renovation take? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline for a bathroom renovation depends on the scope of the project. A simple update might take 1-2 weeks, while a complete remodel typically takes 3-5 weeks. During your consultation, we'll provide a detailed timeline specific to your project.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the average cost of a bathroom renovation? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bathroom renovation costs vary based on the size of your bathroom, the quality of materials, and the extent of the changes. Minor updates might start around $8,000, while full custom renovations can range from $20,000 to $50,000+. We provide detailed, transparent pricing during our proposal phase.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can you help with design ideas for my bathroom? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our team can provide design guidance based on your preferences, budget, and the latest trends. We'll help you select fixtures, tile, colors, and layouts that work together to create a cohesive and beautiful bathroom.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need permits for a bathroom renovation? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Permits are typically required for bathroom renovations that involve changes to plumbing, electrical, or structural elements. As part of our service, we handle all necessary permits and ensure that all work meets or exceeds local building codes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What should I consider when planning a bathroom renovation? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Key considerations include your budget, timeline, how long you plan to stay in your home, your daily routine, storage needs, lighting preferences, and any accessibility requirements. During our consultation, we'll discuss all these factors to ensure your renovation meets your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../logos/fullercircle.png" alt="Fuller R&R with tools" class="footer-logo">
+                    <p>Quality craftsmanship for Middle Tennessee families. Licensed, insured, and committed to excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="kitchen-renovations.html">Kitchen Remodels</a></li>
+                        <li><a href="bathroom-renovations.html" class="active">Bathroom Remodels</a></li>
+                        <li><a href="whole-home-renovations.html">Whole Home Renovations</a></li>
+                        <li><a href="fire-water-damage.html">Fire/Water Damage Restoration</a></li>
+                        <li><a href="flooring-painting.html">Flooring & Painting</a></li>
+                        <li><a href="../index.html#services">General Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+19314469792">(931) 446-9792</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fullerresto@gmail.com">fullerresto@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Columbia, TN 38401</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="license-info">
+                    <p>Licensed & Insured | License #[LICENSE_NUMBER]</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Fuller Restoration & Renovation LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flooring & Painting - Fuller Restoration & Renovation</title>
+    <meta name="description" content="Expert installation of hardwood, tile, carpet, and professional interior/exterior painting. Quality craftsmanship in Middle Tennessee.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link rel="icon" href="../logos/fullercircle.png" type="image/png">
+    <style>
+        /* Service Page Specific Styles */
+        .service-page {
+            padding: 120px 0 80px;
+            background-color: #f8f9fa;
+        }
+        
+        .service-page h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        
+        .service-page-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #2c3e50;
+            transform: translateX(-5px);
+        }
+        
+        .service-hero {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .service-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .service-hero-overlay h2 {
+            color: white;
+            font-size: 2.5rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-hero-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-description h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .service-description p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-benefits {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-benefits h3 {
+            color: #c0392b;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-item i {
+            color: #c0392b;
+            font-size: 1.3rem;
+            margin-top: 0.2rem;
+        }
+        
+        .benefit-item div h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-item div p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .service-process {
+            margin-bottom: 4rem;
+        }
+        
+        .service-process h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #c0392b;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .process-step h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .process-step p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .project-examples {
+            margin-bottom: 4rem;
+        }
+        
+        .project-examples h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .example-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .example-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .example-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .example-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .example-item:hover .example-image img {
+            transform: scale(1.05);
+        }
+        
+        .example-caption {
+            padding: 1.5rem;
+            background: white;
+        }
+        
+        .example-caption h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .example-caption p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary {
+            background: white;
+            color: #c0392b;
+        }
+        
+        .cta-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        
+        .faq-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .services-tabs {
+            margin-bottom: 4rem;
+        }
+        
+        .services-tabs h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .tabs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: #c0392b;
+            color: white;
+            border-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-content h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tab-content p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tab-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tab-content ul li {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        
+        .color-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.2);
+            border-color: #c0392b;
+        }
+        
+        @media (max-width: 768px) {
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-hero {
+                height: 300px;
+            }
+            
+            .service-hero-overlay h2 {
+                font-size: 2rem;
+            }
+            
+            .service-hero-overlay p {
+                font-size: 1.1rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../logos/fullercircle.png" alt="Fuller Restoration & Renovation" class="logo">
+                <div class="nav-text-logo">
+                    <span class="nav-company-name">Fuller Restoration</span>
+                    <span class="nav-company-tagline">& Renovation</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#services" class="nav-link active">Services</a>
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+                <a href="../index.html#contact" class="nav-link cta-nav">Free Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Page Content -->
+    <section class="service-page">
+        <div class="container">
+            <h1>Flooring & Painting</h1>
+            <p class="service-page-subtitle">Expert installation of hardwood, tile, carpet, and professional interior/exterior painting</p>
+            
+            <div class="back-to-home">
+                <a href="../index.html#services" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </a>
+            </div>
+            
+            <!-- Service Hero -->
+            <div class="service-hero">
+                <img src="../projects/livingroomafter.jpg" alt="Flooring and painting by Fuller Restoration & Renovation">
+                <div class="service-hero-overlay">
+                    <h2>Transform Your Space</h2>
+                    <p>New flooring and fresh paint can completely transform the look and feel of your home with minimal disruption.</p>
+                </div>
+            </div>
+            
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-description">
+                    <h2>Flooring & Painting Services</h2>
+                    <p>New flooring and fresh paint are two of the most impactful ways to transform your home. At Fuller Restoration & Renovation, we provide expert flooring installation and professional painting services to help you create the look and feel you desire for your living spaces.</p>
+                    
+                    <p>Our flooring services include installation of hardwood, engineered wood, luxury vinyl plank (LVP), tile, carpet, and laminate. We handle everything from removal of existing flooring to expert installation and finishing, ensuring a beautiful and durable result that enhances your home's value and appearance.</p>
+                    
+                    <p>Our painting services cover both interior and exterior applications, with meticulous preparation, premium paints, and expert application techniques. Whether you're looking to refresh a single room or completely change the color scheme of your entire home, our skilled painters deliver flawless results that stand the test of time.</p>
+                    
+                    <p>We understand that flooring and painting projects can be disruptive, which is why we work efficiently to minimize inconvenience while maintaining our high standards for quality. Our team is respectful of your home, taking care to protect your belongings and clean up thoroughly after each day's work.</p>
+                </div>
+                
+                <div class="service-benefits">
+                    <h3>Benefits of Professional Installation</h3>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Superior Results</h4>
+                            <p>Professional installation ensures proper techniques, even coverage, and a flawless finish.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Time Efficiency</h4>
+                            <p>Our experienced team completes projects faster than DIY approaches, minimizing disruption.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <h4>Proper Equipment</h4>
+                            <p>We use professional-grade tools and materials for superior, long-lasting results.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>Increased Home Value</h4>
+                            <p>Quality flooring and paint work significantly enhance your home's market value.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Warranty Protection</h4>
+                            <p>Our work is backed by warranties for both materials and installation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Tabs -->
+            <div class="services-tabs">
+                <h2>Our Flooring & Painting Services</h2>
+                
+                <div class="tabs-container">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="flooring">Flooring</button>
+                        <button class="tab-btn" data-tab="painting">Painting</button>
+                    </div>
+                    
+                    <div id="flooring" class="tab-content active">
+                        <h3>Flooring Installation</h3>
+                        <p>We offer expert installation of a wide range of flooring options to suit your style, budget, and lifestyle needs:</p>
+                        
+                        <ul>
+                            <li><strong>Hardwood Flooring:</strong> Solid hardwood installation with various species, finishes, and installation patterns.</li>
+                            <li><strong>Engineered Wood:</strong> A versatile alternative to solid hardwood that offers greater stability in areas with moisture concerns.</li>
+                            <li><strong>Luxury Vinyl Plank (LVP):</strong> Waterproof, durable flooring that mimics the look of hardwood or stone at a more affordable price point.</li>
+                            <li><strong>Tile Flooring:</strong> Ceramic, porcelain, and natural stone tile installation for kitchens, bathrooms, and other areas.</li>
+                            <li><strong>Carpet Installation:</strong> Various carpet styles, textures, and padding options for comfortable, warm spaces.</li>
+                            <li><strong>Laminate Flooring:</strong> Affordable, durable flooring that resembles hardwood with easy maintenance.</li>
+                        </ul>
+                        
+                        <p>Our flooring process includes removal of existing flooring, subfloor preparation, professional installation, and finishing. We help you select the right flooring material for each space in your home, considering factors like durability, maintenance, and aesthetic appeal.</p>
+                    </div>
+                    
+                    <div id="painting" class="tab-content">
+                        <h3>Professional Painting</h3>
+                        <p>Our comprehensive painting services include both interior and exterior applications:</p>
+                        
+                        <ul>
+                            <li><strong>Interior Painting:</strong> Walls, ceilings, trim, doors, cabinets, and more with precise cutting-in and even coverage.</li>
+                            <li><strong>Exterior Painting:</strong> House exteriors, trim, doors, decks, and other outdoor surfaces with weather-resistant paints.</li>
+                            <li><strong>Cabinet Painting:</strong> Transform your kitchen or bathroom with professionally painted cabinets.</li>
+                            <li><strong>Color Consultation:</strong> Expert advice on color selection to achieve your desired look and feel.</li>
+                            <li><strong>Specialty Finishes:</strong> Faux finishes, accent walls, and decorative techniques for unique spaces.</li>
+                            <li><strong>Wallpaper Removal:</strong> Professional removal of old wallpaper and wall preparation for painting.</li>
+                        </ul>
+                        
+                        <p>Our painting process includes thorough preparation (cleaning, sanding, priming), careful masking and protection of surfaces, application of premium paints, and detailed clean-up. We use low-VOC paints when requested and ensure proper ventilation during the painting process.</p>
+                        
+                        <h4>Popular Paint Colors</h4>
+                        <div class="color-options">
+                            <div class="color-swatch" style="background-color: #f5f5f5;" title="Crisp White"></div>
+                            <div class="color-swatch" style="background-color: #e0e0d1;" title="Agreeable Gray"></div>
+                            <div class="color-swatch" style="background-color: #c2c2b0;" title="Accessible Beige"></div>
+                            <div class="color-swatch" style="background-color: #b3c0cd;" title="Misty Blue"></div>
+                            <div class="color-swatch" style="background-color: #d1c0b3;" title="Soft Taupe"></div>
+                            <div class="color-swatch" style="background-color: #adbdb7;" title="Sage Green"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Process -->
+            <div class="service-process">
+                <h2>Our Installation Process</h2>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Initial Consultation</h4>
+                        <p>We meet to discuss your vision, needs, budget, and timeline. We'll help you select the right materials for your project.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Measurement & Estimate</h4>
+                        <p>We take precise measurements of your space and provide a detailed estimate for materials and labor.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Material Selection</h4>
+                        <p>We help you select the perfect flooring materials or paint colors to achieve your desired look and feel.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Preparation</h4>
+                        <p>We prepare the space by removing existing flooring or properly prepping surfaces for painting.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Installation/Application</h4>
+                        <p>Our skilled craftsmen install your new flooring or apply paint with precision and attention to detail.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4>Final Inspection</h4>
+                        <p>We conduct a thorough inspection and walkthrough with you to ensure everything meets our high standards and your expectations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Examples -->
+            <div class="project-examples">
+                <h2>Recent Flooring & Painting Projects</h2>
+                
+                <div class="examples-grid">
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/livingroomafter.jpg" alt="Hardwood flooring installation">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Hardwood Flooring Installation</h4>
+                            <p>Installation of oak hardwood flooring throughout the main living areas of a home in Spring Hill, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/bathroomafter.jpg" alt="Tile flooring installation">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Bathroom Tile Installation</h4>
+                            <p>Porcelain tile installation with decorative accent tiles in a master bathroom in Columbia, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/roomafter.jpg" alt="Interior painting">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Whole-Home Interior Painting</h4>
+                            <p>Complete interior painting with custom accent walls and trim work in Franklin, TN.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Transform Your Space?</h2>
+                <p>Contact us today to schedule your free consultation and estimate. Let's bring your vision to life with quality craftsmanship and attention to detail.</p>
+                
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="cta-btn cta-primary">Get Your Free Estimate</a>
+                    <a href="../gallery.html" class="cta-btn cta-secondary">View More Projects</a>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does it take to install new flooring? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline for flooring installation depends on the type of flooring, the size of the area, and the condition of the subfloor. As a general guideline: Hardwood installation typically takes 1-3 days for an average-sized room, tile installation takes 2-4 days including drying time, and carpet or vinyl installation usually takes 1-2 days. During your consultation, we'll provide a detailed timeline specific to your project.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What type of flooring is best for kitchens and bathrooms? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For kitchens and bathrooms, we typically recommend water-resistant or waterproof options such as porcelain or ceramic tile, luxury vinyl plank (LVP), or engineered hardwood. These materials stand up well to moisture and are easy to clean. Natural stone is also an excellent option for bathrooms but requires proper sealing. We'll help you select the best option based on your specific needs, budget, and aesthetic preferences.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How many coats of paint do you apply? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically apply two coats of paint after proper priming for most interior and exterior surfaces. This ensures even coverage, true color representation, and maximum durability. For darker colors or significant color changes, additional coats may be necessary. Our goal is to achieve a flawless finish that will look beautiful for years to come.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to move my furniture before you start work? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For flooring installation, the room needs to be completely clear of furniture. For painting, we can move smaller furniture items to the center of the room and cover them, but larger pieces should be removed if possible. We can discuss furniture moving options during your consultation. For an additional fee, we can arrange for furniture moving services to make the process easier for you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I maintain my new flooring? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each flooring type has specific maintenance requirements. For hardwood, regular sweeping and occasional damp mopping with a hardwood-specific cleaner is recommended. Tile floors can be cleaned with mild detergent and water. Luxury vinyl and laminate should be swept regularly and cleaned with manufacturer-recommended products. We provide detailed care instructions for your specific flooring upon completion of installation to help you maintain its beauty and extend its lifespan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../logos/fullercircle.png" alt="Fuller R&R with tools" class="footer-logo">
+                    <p>Quality craftsmanship for Middle Tennessee families. Licensed, insured, and committed to excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="kitchen-renovations.html">Kitchen Remodels</a></li>
+                        <li><a href="bathroom-renovations.html">Bathroom Remodels</a></li>
+                        <li><a href="whole-home-renovations.html">Whole Home Renovations</a></li>
+                        <li><a href="fire-water-damage.html">Fire/Water Damage Restoration</a></li>
+                        <li><a href="flooring-painting.html" class="active">Flooring & Painting</a></li>
+                        <li><a href="../index.html#services">General Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+19314469792">(931) 446-9792</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fullerresto@gmail.com">fullerresto@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Columbia, TN 38401</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="license-info">
+                    <p>Licensed & Insured | License #[LICENSE_NUMBER]</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Fuller Restoration & Renovation LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Tabs Functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and content
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

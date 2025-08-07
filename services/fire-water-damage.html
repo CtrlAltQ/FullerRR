@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire & Water Damage Restoration - Fuller Restoration & Renovation</title>
+    <meta name="description" content="Professional fire and water damage restoration services to bring your home back to its original beauty. Emergency response and quality craftsmanship in Middle Tennessee.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link rel="icon" href="../logos/fullercircle.png" type="image/png">
+    <style>
+        /* Service Page Specific Styles */
+        .service-page {
+            padding: 120px 0 80px;
+            background-color: #f8f9fa;
+        }
+        
+        .service-page h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        
+        .service-page-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #2c3e50;
+            transform: translateX(-5px);
+        }
+        
+        .service-hero {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .service-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .service-hero-overlay h2 {
+            color: white;
+            font-size: 2.5rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-hero-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .service-description h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .service-description p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-benefits {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-benefits h3 {
+            color: #c0392b;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-item i {
+            color: #c0392b;
+            font-size: 1.3rem;
+            margin-top: 0.2rem;
+        }
+        
+        .benefit-item div h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-item div p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .service-process {
+            margin-bottom: 4rem;
+        }
+        
+        .service-process h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #c0392b;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .process-step h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .process-step p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .project-examples {
+            margin-bottom: 4rem;
+        }
+        
+        .project-examples h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .example-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .example-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .example-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .example-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .example-item:hover .example-image img {
+            transform: scale(1.05);
+        }
+        
+        .example-caption {
+            padding: 1.5rem;
+            background: white;
+        }
+        
+        .example-caption h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .example-caption p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary {
+            background: white;
+            color: #c0392b;
+        }
+        
+        .cta-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        
+        .faq-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .damage-types {
+            margin-bottom: 4rem;
+        }
+        
+        .damage-types h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .damage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .damage-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .damage-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .damage-item i {
+            font-size: 3rem;
+            color: #c0392b;
+            margin-bottom: 1.5rem;
+        }
+        
+        .damage-item h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .damage-item p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .emergency-banner {
+            background: #c0392b;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .emergency-text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .emergency-text i {
+            font-size: 2rem;
+        }
+        
+        .emergency-text h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        .emergency-call {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            color: #c0392b;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .emergency-call:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-hero {
+                height: 300px;
+            }
+            
+            .service-hero-overlay h2 {
+                font-size: 2rem;
+            }
+            
+            .service-hero-overlay p {
+                font-size: 1.1rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .damage-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .emergency-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .emergency-text {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../logos/fullercircle.png" alt="Fuller Restoration & Renovation" class="logo">
+                <div class="nav-text-logo">
+                    <span class="nav-company-name">Fuller Restoration</span>
+                    <span class="nav-company-tagline">& Renovation</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#services" class="nav-link active">Services</a>
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+                <a href="../index.html#contact" class="nav-link cta-nav">Free Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Page Content -->
+    <section class="service-page">
+        <div class="container">
+            <h1>Fire & Water Damage Restoration</h1>
+            <p class="service-page-subtitle">Professional restoration services to bring your home back to its original beauty after damage</p>
+            
+            <div class="emergency-banner">
+                <div class="emergency-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>24/7 Emergency Response Available</h3>
+                </div>
+                <a href="tel:+19314469792" class="emergency-call">
+                    <i class="fas fa-phone"></i> Call (931) 446-9792
+                </a>
+            </div>
+            
+            <div class="back-to-home">
+                <a href="../index.html#services" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Services
+                </a>
+            </div>
+            
+            <!-- Service Hero -->
+            <div class="service-hero">
+                <img src="../projects/downstairsafter.jpg" alt="Fire and water damage restoration by Fuller Restoration & Renovation">
+                <div class="service-hero-overlay">
+                    <h2>Restore Your Home After Disaster</h2>
+                    <p>Quick response, thorough assessment, and expert restoration to help you recover from fire and water damage.</p>
+                </div>
+            </div>
+            
+            <!-- Service Content -->
+            <div class="service-content">
+                <div class="service-description">
+                    <h2>Fire & Water Damage Restoration Services</h2>
+                    <p>When disaster strikes your home, Fuller Restoration & Renovation is here to help you recover. Our comprehensive fire and water damage restoration services are designed to quickly assess the damage, mitigate further issues, and restore your home to its pre-damage condition or better.</p>
+                    
+                    <p>Water damage from flooding, burst pipes, or leaking appliances can cause significant structural issues and lead to dangerous mold growth if not addressed promptly. Our team uses professional-grade equipment and proven techniques to extract water, thoroughly dry affected areas, and restore damaged materials.</p>
+                    
+                    <p>Fire damage often extends beyond what's visible, with smoke and soot affecting areas far from the fire source. Our restoration process includes thorough cleaning of soot and smoke residue, odor removal, and structural repairs to ensure your home is safe and beautiful again.</p>
+                    
+                    <p>We understand that experiencing fire or water damage is stressful and disruptive. That's why we work efficiently to minimize the impact on your daily life while delivering exceptional results. Our team coordinates with insurance companies to streamline the claims process, making your recovery as smooth as possible.</p>
+                </div>
+                
+                <div class="service-benefits">
+                    <h3>Benefits of Professional Restoration</h3>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div>
+                            <h4>Quick Response Time</h4>
+                            <p>24/7 emergency response to minimize damage and begin the restoration process immediately.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Prevent Secondary Damage</h4>
+                            <p>Professional restoration prevents mold growth, structural weakening, and other secondary issues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <h4>Professional Equipment</h4>
+                            <p>Industrial-grade dehumidifiers, air movers, and specialized cleaning equipment for thorough restoration.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <div>
+                            <h4>Insurance Coordination</h4>
+                            <p>We work directly with your insurance company to streamline the claims process.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Peace of Mind</h4>
+                            <p>Professional restoration ensures your home is safe, clean, and properly restored.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Damage Types -->
+            <div class="damage-types">
+                <h2>Types of Damage We Restore</h2>
+                
+                <div class="damage-grid">
+                    <div class="damage-item">
+                        <i class="fas fa-fire"></i>
+                        <h4>Fire Damage</h4>
+                        <p>Restoration of structural damage, smoke and soot removal, odor elimination, and complete rebuilding services.</p>
+                    </div>
+                    
+                    <div class="damage-item">
+                        <i class="fas fa-water"></i>
+                        <h4>Water Damage</h4>
+                        <p>Water extraction, structural drying, dehumidification, mold prevention, and repairs for all water-related damage.</p>
+                    </div>
+                    
+                    <div class="damage-item">
+                        <i class="fas fa-wind"></i>
+                        <h4>Storm Damage</h4>
+                        <p>Restoration services for damage caused by storms, including roof leaks, flooding, and wind damage.</p>
+                    </div>
+                    
+                    <div class="damage-item">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Mold Remediation</h4>
+                        <p>Safe and thorough removal of mold, addressing the source of moisture, and preventing future growth.</p>
+                    </div>
+                    
+                    <div class="damage-item">
+                        <i class="fas fa-cloud-rain"></i>
+                        <h4>Flood Damage</h4>
+                        <p>Comprehensive restoration for homes affected by flooding, including water extraction, sanitization, and rebuilding.</p>
+                    </div>
+                    
+                    <div class="damage-item">
+                        <i class="fas fa-smoking-ban"></i>
+                        <h4>Smoke Damage</h4>
+                        <p>Specialized cleaning techniques to remove smoke residue and odors from walls, ceilings, furniture, and belongings.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Process -->
+            <div class="service-process">
+                <h2>Our Restoration Process</h2>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Emergency Response</h4>
+                        <p>We respond quickly to your call, arriving on-site to assess the damage and begin emergency mitigation procedures.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Damage Assessment</h4>
+                        <p>Our team conducts a thorough assessment of the damage, documenting all affected areas for insurance purposes.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Water Extraction & Drying</h4>
+                        <p>For water damage, we use professional equipment to remove water and thoroughly dry all affected areas.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Cleaning & Sanitizing</h4>
+                        <p>We clean, sanitize, and deodorize all affected surfaces, removing soot, smoke, and water damage residues.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h4>Restoration & Repairs</h4>
+                        <p>Our skilled craftsmen repair and restore damaged areas, from minor repairs to complete reconstruction.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h4>Final Inspection</h4>
+                        <p>We conduct a thorough inspection to ensure all damage has been properly addressed and your home is fully restored.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Examples -->
+            <div class="project-examples">
+                <h2>Recent Restoration Projects</h2>
+                
+                <div class="examples-grid">
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/downstairsafter.jpg" alt="Water damage restoration">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Basement Flood Restoration</h4>
+                            <p>Complete restoration after basement flooding, including water extraction, drying, mold prevention, and rebuilding in Spring Hill, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/livingroomafter.jpg" alt="Fire damage restoration">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Kitchen Fire Restoration</h4>
+                            <p>Restoration after a kitchen fire, including smoke and soot removal, odor elimination, and complete kitchen rebuild in Columbia, TN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example-item" onclick="openLightbox(this.querySelector('img'))">
+                        <div class="example-image">
+                            <img src="../projects/roomafter.jpg" alt="Storm damage restoration">
+                        </div>
+                        <div class="example-caption">
+                            <h4>Storm Damage Repair</h4>
+                            <p>Restoration after severe storm damage, including roof repairs, water damage mitigation, and interior repairs in Franklin, TN.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Need Emergency Restoration Services?</h2>
+                <p>Contact us immediately for 24/7 emergency response. Our team is ready to help you recover from fire and water damage with professional restoration services.</p>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+19314469792" class="cta-btn cta-primary">
+                        <i class="fas fa-phone"></i> Call (931) 446-9792
+                    </a>
+                    <a href="../index.html#contact" class="cta-btn cta-secondary">Request Service Online</a>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How quickly can you respond to an emergency? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer 24/7 emergency response services and typically arrive on-site within 1-2 hours of your call, depending on your location in Middle Tennessee. Quick response is crucial to minimize damage and begin the restoration process as soon as possible.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you work with insurance companies? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we work directly with all major insurance companies to streamline the claims process. We document all damage thoroughly, provide detailed estimates, and communicate with your insurance adjuster to ensure you receive the coverage you're entitled to. Our goal is to make the restoration process as stress-free as possible during this difficult time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does the restoration process take? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline for restoration varies depending on the extent of the damage. Minor water damage might be resolved in 3-5 days, while significant fire or flood damage could take several weeks to months, especially if structural repairs are needed. During your initial assessment, we'll provide a detailed timeline specific to your situation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can you save my belongings after water or fire damage? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many belongings can be restored after water or fire damage using specialized cleaning techniques. We assess each item individually and use appropriate methods for restoration. For items that cannot be restored on-site, we can recommend professional content restoration services. We document all salvageable and non-salvageable items for insurance purposes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What should I do immediately after experiencing water or fire damage? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For water damage: If safe, turn off the water source and electricity to affected areas. Remove small valuables from the area and mop up excess water if possible. For fire damage: Do not re-enter the property until fire officials declare it safe. In both cases, contact your insurance company and then call us immediately for emergency response. Do not attempt to clean soot, smoke, or contaminated water yourself, as this requires professional equipment and techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../logos/fullercircle.png" alt="Fuller R&R with tools" class="footer-logo">
+                    <p>Quality craftsmanship for Middle Tennessee families. Licensed, insured, and committed to excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#services">Services</a></li>
+                        <li><a href="../gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="kitchen-renovations.html">Kitchen Remodels</a></li>
+                        <li><a href="bathroom-renovations.html">Bathroom Remodels</a></li>
+                        <li><a href="whole-home-renovations.html">Whole Home Renovations</a></li>
+                        <li><a href="fire-water-damage.html" class="active">Fire/Water Damage Restoration</a></li>
+                        <li><a href="flooring-painting.html">Flooring & Painting</a></li>
+                        <li><a href="../index.html#services">General Repairs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+19314469792">(931) 446-9792</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fullerresto@gmail.com">fullerresto@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Columbia, TN 38401</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="license-info">
+                    <p>Licensed & Insured | License #[LICENSE_NUMBER]</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Fuller Restoration & Renovation LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

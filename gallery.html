@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Project Gallery - Fuller Restoration & Renovation</title>
+    <meta name="description" content="View our complete portfolio of renovation projects across Middle Tennessee. Kitchen, bathroom, whole home renovations and more.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="logos/fullercircle.png" type="image/png">
+    <style>
+        /* Gallery Page Specific Styles */
+        .gallery-page {
+            padding: 120px 0 80px;
+            background-color: #1a1a1a;
+            min-height: 100vh;
+        }
+        
+        .gallery-page h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        
+        .gallery-page-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #2c3e50;
+            transform: translateX(-5px);
+        }
+
+        .project-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-title i {
+            color: #ff6b6b;
+            font-size: 1.8rem;
+        }
+        
+        .full-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            background: #2a2a2a;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-caption {
+            padding: 1.5rem;
+            background: #2a2a2a;
+        }
+
+        .project-caption h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-caption p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-page h1 {
+                font-size: 2.5rem;
+            }
+            
+            .full-gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+
+            .category-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-page h1 {
+                font-size: 2.2rem;
+            }
+            
+            .full-gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .gallery-item img {
+                height: 220px;
+            }
+
+            .category-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logos/fullercircle.png" alt="Fuller Restoration & Renovation" class="logo">
+                <div class="nav-text-logo">
+                    <span class="nav-company-name">Fuller Restoration</span>
+                    <span class="nav-company-tagline">& Renovation</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="index.html#contact" class="nav-link cta-nav">Free Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Page Content -->
+    <section class="gallery-page">
+        <div class="container">
+            <h1>Complete Project Gallery</h1>
+            <p class="gallery-page-subtitle">Explore our full portfolio of renovation and restoration projects across Middle Tennessee</p>
+            
+            <div class="back-to-home">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            
+            <!-- Stairs & Railings -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-hammer"></i> Stairs & Railings</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/stairs.jpg" alt="Stairs renovation">
+                        <div class="project-caption">
+                            <h4>Stair Renovation</h4>
+                            <p>Complete stair refinishing and repair</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/stairsbeforeandafter.jpg" alt="Stairs before and after">
+                        <div class="project-caption">
+                            <h4>Stairs Before & After</h4>
+                            <p>Dramatic transformation of worn stairs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/stairsafter.jpg" alt="Stairs after renovation">
+                        <div class="project-caption">
+                            <h4>Finished Staircase</h4>
+                            <p>Beautiful finished staircase renovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/stairsbefore.jpg" alt="Stairs before renovation">
+                        <div class="project-caption">
+                            <h4>Before: Worn Stairs</h4>
+                            <p>Original condition before renovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/downstairs.jpg" alt="Downstairs area">
+                        <div class="project-caption">
+                            <h4>Downstairs Renovation</h4>
+                            <p>Lower level stair area improvement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/stairs/stairsdown.jpg" alt="Stair construction">
+                        <div class="project-caption">
+                            <h4>Stair Construction</h4>
+                            <p>Professional stair construction work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/armrest-before.jpg" alt="Handrail before">
+                        <div class="project-caption">
+                            <h4>Before: Old Handrail</h4>
+                            <p>Original handrail condition</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/armrest.jpg" alt="New handrail">
+                        <div class="project-caption">
+                            <h4>Custom Handrail</h4>
+                            <p>Beautiful custom handrail installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/armrest3.jpg" alt="Handrail detail">
+                        <div class="project-caption">
+                            <h4>Handrail Detail Work</h4>
+                            <p>Detailed craftsmanship on handrail</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/handrest.jpg" alt="Hand rest detail">
+                        <div class="project-caption">
+                            <h4>Hand Rest Installation</h4>
+                            <p>Custom hand rest detail work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/handrest2.jpg" alt="Another handrail view">
+                        <div class="project-caption">
+                            <h4>Handrail Craftsmanship</h4>
+                            <p>Quality handrail construction</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/handrail/stairsnice.jpg" alt="Finished stairs with handrail">
+                        <div class="project-caption">
+                            <h4>Complete Stair & Rail</h4>
+                            <p>Finished stairs with custom handrail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Doors & Entries -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-door-open"></i> Doors & Entries</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/1.jpg" alt="Door project">
+                        <div class="project-caption">
+                            <h4>Door Installation</h4>
+                            <p>Professional door installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/2.jpg" alt="Door renovation">
+                        <div class="project-caption">
+                            <h4>Door Renovation</h4>
+                            <p>Door refinishing and repair work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/4.jpg" alt="Door frame work">
+                        <div class="project-caption">
+                            <h4>Door Frame Installation</h4>
+                            <p>Custom door frame construction</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/6.jpg" alt="Entry door">
+                        <div class="project-caption">
+                            <h4>Entry Door Work</h4>
+                            <p>Professional entry door installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/doorentrance.jpg" alt="Door entrance">
+                        <div class="project-caption">
+                            <h4>Entrance Renovation</h4>
+                            <p>Complete entrance door renovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/door/doorway.jpg" alt="Doorway work">
+                        <div class="project-caption">
+                            <h4>Doorway Construction</h4>
+                            <p>Custom doorway construction work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/doorunderstairs/5.jpg" alt="Under stairs door">
+                        <div class="project-caption">
+                            <h4>Under-Stair Storage</h4>
+                            <p>Custom under-stair door installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/doorunderstairs/8.jpg" alt="Storage door">
+                        <div class="project-caption">
+                            <h4>Storage Access Door</h4>
+                            <p>Efficient storage access solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Windows -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-window-maximize"></i> Windows</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/kitchensink.jpg" alt="Kitchen sink window">
+                        <div class="project-caption">
+                            <h4>Kitchen Window</h4>
+                            <p>Kitchen sink window installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/sinkwindow.jpg" alt="Sink area window">
+                        <div class="project-caption">
+                            <h4>Sink Window Detail</h4>
+                            <p>Custom window work in kitchen area</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/stainedglasswindow.jpg" alt="Stained glass window">
+                        <div class="project-caption">
+                            <h4>Stained Glass Window</h4>
+                            <p>Beautiful stained glass installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/stainglasswindow.jpg" alt="Stain glass detail">
+                        <div class="project-caption">
+                            <h4>Glass Window Detail</h4>
+                            <p>Detailed stained glass work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/stainglasswindow2.jpg" alt="Another stained glass">
+                        <div class="project-caption">
+                            <h4>Custom Glass Work</h4>
+                            <p>Custom stained glass installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/windows/windows2x.jpg" alt="Double windows">
+                        <div class="project-caption">
+                            <h4>Double Window Installation</h4>
+                            <p>Professional double window work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interior Rooms -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-home"></i> Interior Rooms</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/rooms/livingroom.jpg" alt="Living room renovation">
+                        <div class="project-caption">
+                            <h4>Living Room Renovation</h4>
+                            <p>Complete living room transformation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/rooms/room.jpg" alt="Room renovation">
+                        <div class="project-caption">
+                            <h4>Room Renovation</h4>
+                            <p>Interior room renovation project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/rooms/roomafter.jpg" alt="Room after renovation">
+                        <div class="project-caption">
+                            <h4>Finished Room</h4>
+                            <p>Beautiful finished room renovation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Attic Renovations -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-warehouse"></i> Attic Renovations</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/attic/attic.jpg" alt="Attic renovation">
+                        <div class="project-caption">
+                            <h4>Attic Conversion</h4>
+                            <p>Professional attic space conversion</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/attic/attic2.jpg" alt="Attic renovation progress">
+                        <div class="project-caption">
+                            <h4>Attic Renovation Progress</h4>
+                            <p>Attic renovation in progress</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/attic/attic3.jpg" alt="Attic completion">
+                        <div class="project-caption">
+                            <h4>Completed Attic Space</h4>
+                            <p>Finished attic conversion project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/attic/bigroom.jpg" alt="Large attic room">
+                        <div class="project-caption">
+                            <h4>Spacious Attic Room</h4>
+                            <p>Large attic space transformation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Exterior Work -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-building"></i> Exterior Work</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/outside/outsidehouse.jpg" alt="Exterior house work">
+                        <div class="project-caption">
+                            <h4>Exterior Renovation</h4>
+                            <p>Complete exterior home renovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/outside/porch.jpg" alt="Porch renovation">
+                        <div class="project-caption">
+                            <h4>Porch Renovation</h4>
+                            <p>Beautiful porch renovation project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/outside/porch2.jpg" alt="Porch detail">
+                        <div class="project-caption">
+                            <h4>Porch Detail Work</h4>
+                            <p>Detailed porch construction work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/balconyhandrail/balcony.jpg" alt="Balcony renovation">
+                        <div class="project-caption">
+                            <h4>Balcony Renovation</h4>
+                            <p>Professional balcony renovation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/balconyhandrail/3.jpg" alt="Balcony handrail">
+                        <div class="project-caption">
+                            <h4>Balcony Handrail</h4>
+                            <p>Custom balcony handrail installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/balconyhandrail/9.jpg" alt="Balcony detail">
+                        <div class="project-caption">
+                            <h4>Balcony Detail</h4>
+                            <p>Detailed balcony construction work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- General Repairs & Miscellaneous -->
+            <div class="project-category">
+                <h2 class="category-title"><i class="fas fa-tools"></i> General Repairs & Miscellaneous</h2>
+                <div class="full-gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/bathroom.jpg" alt="Bathroom before renovation">
+                        <div class="project-caption">
+                            <h4>Bathroom Before</h4>
+                            <p>Original bathroom condition</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/bathroomafter.jpg" alt="Bathroom after renovation">
+                        <div class="project-caption">
+                            <h4>Bathroom After</h4>
+                            <p>Beautiful bathroom transformation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/fireplacebrick.jpg" alt="Fireplace brickwork">
+                        <div class="project-caption">
+                            <h4>Fireplace Brickwork</h4>
+                            <p>Professional fireplace brick restoration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/framing.jpg" alt="Framing work">
+                        <div class="project-caption">
+                            <h4>Framing Construction</h4>
+                            <p>Professional framing and structural work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/gate.jpg" alt="Gate installation">
+                        <div class="project-caption">
+                            <h4>Gate Installation</h4>
+                            <p>Custom gate installation project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/mantle.jpg" alt="Mantle installation">
+                        <div class="project-caption">
+                            <h4>Custom Mantle</h4>
+                            <p>Beautiful custom mantle installation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous1.jpg" alt="General repair work">
+                        <div class="project-caption">
+                            <h4>General Repair Work</h4>
+                            <p>Various repair and maintenance tasks</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous11.jpg" alt="Miscellaneous project">
+                        <div class="project-caption">
+                            <h4>Custom Project Work</h4>
+                            <p>Specialized custom project work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous2.jpg" alt="Repair project">
+                        <div class="project-caption">
+                            <h4>Repair Project</h4>
+                            <p>Professional repair work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous22.jpg" alt="Another repair project">
+                        <div class="project-caption">
+                            <h4>Quality Repair Work</h4>
+                            <p>High-quality repair and restoration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous4.jpg" alt="Miscellaneous work">
+                        <div class="project-caption">
+                            <h4>General Construction</h4>
+                            <p>Various construction projects</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous5.jpg" alt="Construction project">
+                        <div class="project-caption">
+                            <h4>Construction Work</h4>
+                            <p>Professional construction services</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openLightbox(this.querySelector('img'))">
+                        <img src="projects/miscellaneous/miscellaneous7.jpg" alt="Repair and renovation">
+                        <div class="project-caption">
+                            <h4>Repair & Renovation</h4>
+                            <p>Combined repair and renovation work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA -->
+            <div class="gallery-cta">
+                <h2 style="color: #2c3e50; margin-bottom: 1rem;">Ready to Start Your Project?</h2>
+                <a href="index.html#contact" class="btn btn-primary gallery-cta-btn">
+                    <i class="fas fa-phone"></i> Get Your Free Estimate
+                </a>
+                <p class="gallery-cta-text">Contact us today to discuss your renovation needs</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="logos/fullercircle.png" alt="Fuller R&R with tools" class="footer-logo">
+                    <p>Quality craftsmanship for Middle Tennessee families. Licensed, insured, and committed to excellence.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Kitchen Remodels</li>
+                        <li>Bathroom Remodels</li>
+                        <li>Whole Home Renovations</li>
+                        <li>Fire/Water Damage Restoration</li>
+                        <li>Flooring & Painting</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+19314469792">(931) 446-9792</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:fullerresto@gmail.com">fullerresto@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Columbia, TN 38401</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="license-info">
+                    <p>Licensed & Insured | License #[LICENSE_NUMBER]</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Fuller Restoration & Renovation LLC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
