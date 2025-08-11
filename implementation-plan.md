@@ -1,4 +1,4 @@
-# Fuller Restoration & Renovation Website Implementation Plan
+# Fuller Restoration & Renovation LLC Website Implementation Plan
 
 ## Priority 1: Core Content Enhancements
 

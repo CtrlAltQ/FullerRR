@@ -1,6 +1,6 @@
-# Fuller Restoration & Renovation Website
+# Fuller Restoration & Renovation LLC Website
 
-This repository contains the website for Fuller Restoration & Renovation, a company providing quality restoration and renovation services across Middle Tennessee.
+This repository contains the website for Fuller Restoration & Renovation LLC, a company providing quality restoration and renovation services across Middle Tennessee.
 
 ## Implemented Features
 
