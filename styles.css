@@ -69,9 +69,9 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #c0392b;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    background-color: #e74c3c;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(231, 76, 60, 0.5);
 }
 
 .btn-secondary {
@@ -83,7 +83,8 @@ p {
 .btn-secondary:hover {
     background-color: #e74c3c;
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
 }
 
 /* Navigation */
@@ -124,10 +125,27 @@ p {
     color: #e0e0e0;
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
     color: #e74c3c;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .cta-nav {
@@ -555,8 +573,9 @@ p {
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-color: #e74c3c;
 }
 
 .service-card i {
@@ -1603,6 +1622,10 @@ html {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.fade-in-section {
+    transition-delay: 0.2s;
 }
 
 /* Form Validation Styles */

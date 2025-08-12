@@ -4,8 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initHeroSlider();
     initGallerySlider();
-    initSmoothScrolling();
     initFormHandling();
+
+    // Lenis Smooth Scrolling
+    const lenis = new Lenis();
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Handle anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                lenis.scrollTo(target);
+            }
+        });
+    });
 });
 
 // Mobile Menu Toggle
@@ -347,27 +367,6 @@ function initGallerySlider() {
     startAutoPlay();
 }
 
-// Smooth Scrolling
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            if (target) {
-                const headerOffset = 80; // Account for fixed header
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
 // Form Handling
 function initFormHandling() {
     const form = document.getElementById('estimate-form');
@@ -539,7 +538,7 @@ function initScrollAnimations() {
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.service-card, .gallery-item, .testimonial-card, .advantage-item').forEach(el => {
+    document.querySelectorAll('.fade-in-section, .service-card, .gallery-item, .testimonial-card, .advantage-item').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
