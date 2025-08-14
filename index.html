@@ -151,7 +151,7 @@
                                 <p>Projects completed on schedule with minimal disruption</p>
                             </div>
                         </div>
-                        <a href="https://www.facebook.com/profile.php?id=61578319719409" target="_blank" class="projects-completed-link">
+                        <a href="https://www.facebook.com/profile.php?id=61578319719409" target="_blank" rel="noopener noreferrer" class="projects-completed-link">
                             <div class="projects-completed">
                                 <span class="follow-text">Follow us on Facebook</span>
                                 <div class="logo-facebook-container">
@@ -214,22 +214,22 @@
             <div class="gallery-slider">
                 <div class="gallery-slider-container">
                     <div class="gallery-slide active">
-                        <img src="projects/stairs/stairs.jpg" alt="Stairs renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/stairs/stairs.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Stairs renovation" onclick="openLightbox(this)">
                     </div>
                     <div class="gallery-slide">
-                        <img src="projects/miscellaneous/bathroomafter.jpg" alt="Bathroom renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/miscellaneous/bathroomafter.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Bathroom renovation" onclick="openLightbox(this)">
                     </div>
                     <div class="gallery-slide">
-                        <img src="projects/windows/kitchensink.jpg" alt="Kitchen window renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/windows/kitchensink.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Kitchen window renovation" onclick="openLightbox(this)">
                     </div>
                     <div class="gallery-slide">
-                        <img src="projects/rooms/livingroom.jpg" alt="Living room renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/rooms/livingroom.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Living room renovation" onclick="openLightbox(this)">
                     </div>
                     <div class="gallery-slide">
-                        <img src="projects/miscellaneous/mantle.jpg" alt="Mantle renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/miscellaneous/mantle.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Mantle renovation" onclick="openLightbox(this)">
                     </div>
                     <div class="gallery-slide">
-                        <img src="projects/miscellaneous/fireplacebrick.jpg" alt="Fireplace renovation" onclick="openLightbox(this)">
+                        <img data-src="projects/miscellaneous/fireplacebrick.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Fireplace renovation" onclick="openLightbox(this)">
                     </div>
                 </div>
                 
@@ -445,12 +445,13 @@
                     </div>
                 </div>
                 
-                <form class="contact-form" id="estimate-form">
+                <form class="contact-form" id="estimate-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <h3>Request Your Free Estimate</h3>
-                    
+                    <p><em>After submitting, please check your email to confirm your submission.</em></p>
+
                     <div class="form-group">
                         <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                        <input type="text" id="fullName" name="name" required>
                     </div>
                     
                     <div class="form-row">
@@ -480,7 +481,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="logos/fullercircle.png" alt="Fuller R&R with tools" class="footer-logo">
+                    <img data-src="logos/fullercircle.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy" alt="Fuller R&R with tools" class="footer-logo">
                     <p>Quality craftsmanship for Middle Tennessee families. Licensed, insured, and committed to excellence.</p>
                 </div>
                 
@@ -513,16 +514,14 @@
                     <p><i class="fas fa-map-marker-alt"></i> Columbia, TN 38401</p>
                     
                     <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61578319719409" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61578319719409" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <div class="license-info">
-                    <p>Licensed & Insured | License #[LICENSE_NUMBER]</p>
+                    <p>Licensed & Insured</p>
                 </div>
                 <div class="copyright">
                     <p>&copy; 2024 Fuller Restoration & Renovation LLC. All rights reserved.</p>
