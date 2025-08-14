@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initHeroSlider();
     initGallerySlider();
-    initFormHandling();
 
     // Lenis Smooth Scrolling
     const lenis = new Lenis();
@@ -367,151 +366,6 @@ function initGallerySlider() {
     startAutoPlay();
 }
 
-// Form Handling
-function initFormHandling() {
-    const form = document.getElementById('estimate-form');
-    
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        
-        // Basic validation
-        const requiredFields = ['fullName', 'email', 'phone'];
-        let isValid = true;
-        
-        requiredFields.forEach(field => {
-            const input = form.querySelector(`[name="${field}"]`);
-            if (!data[field] || data[field].trim() === '') {
-                showFieldError(input, 'This field is required');
-                isValid = false;
-            } else {
-                clearFieldError(input);
-            }
-        });
-
-        // Email validation
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (data.email && !emailPattern.test(data.email)) {
-            showFieldError(form.querySelector('[name="email"]'), 'Please enter a valid email address');
-            isValid = false;
-        }
-
-        // Phone validation (basic)
-        const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
-        if (data.phone && !phonePattern.test(data.phone.replace(/[\s\-\(\)\.]/g, ''))) {
-            showFieldError(form.querySelector('[name="phone"]'), 'Please enter a valid phone number');
-            isValid = false;
-        }
-
-        if (isValid) {
-            // Show success message
-            showSuccessMessage('Thank you! We\'ll contact you soon with your free estimate.');
-            
-            // Reset form
-            form.reset();
-            
-            // In a real application, you would send the data to your server
-            console.log('Form data:', data);
-        }
-    });
-
-    // Real-time validation
-    const inputs = form.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            validateField(this);
-        });
-        
-        input.addEventListener('input', function() {
-            clearFieldError(this);
-        });
-    });
-}
-
-// Form validation helpers
-function validateField(field) {
-    const value = field.value.trim();
-    const name = field.name;
-
-    if (field.hasAttribute('required') && !value) {
-        showFieldError(field, 'This field is required');
-        return false;
-    }
-
-    if (name === 'email' && value) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(value)) {
-            showFieldError(field, 'Please enter a valid email address');
-            return false;
-        }
-    }
-
-    if (name === 'phone' && value) {
-        const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phonePattern.test(value.replace(/[\s\-\(\)\.]/g, ''))) {
-            showFieldError(field, 'Please enter a valid phone number');
-            return false;
-        }
-    }
-
-    clearFieldError(field);
-    return true;
-}
-
-function showFieldError(field, message) {
-    field.classList.add('error');
-    
-    // Remove existing error message
-    const existingError = field.parentNode.querySelector('.error-message');
-    if (existingError) {
-        existingError.remove();
-    }
-    
-    // Add new error message
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.textContent = message;
-    errorDiv.style.display = 'block';
-    field.parentNode.appendChild(errorDiv);
-}
-
-function clearFieldError(field) {
-    field.classList.remove('error');
-    const errorMessage = field.parentNode.querySelector('.error-message');
-    if (errorMessage) {
-        errorMessage.remove();
-    }
-}
-
-function showSuccessMessage(message) {
-    // Remove existing success message
-    const existingSuccess = document.querySelector('.success-message');
-    if (existingSuccess) {
-        existingSuccess.remove();
-    }
-    
-    // Create and show success message
-    const successDiv = document.createElement('div');
-    successDiv.className = 'success-message';
-    successDiv.textContent = message;
-    successDiv.style.display = 'block';
-    
-    const form = document.getElementById('estimate-form');
-    form.insertBefore(successDiv, form.firstChild);
-    
-    // Remove success message after 5 seconds
-    setTimeout(() => {
-        if (successDiv.parentNode) {
-            successDiv.remove();
-        }
-    }, 5000);
-}
-
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
@@ -546,6 +400,9 @@ function initScrollAnimations() {
 
 // Initialize scroll animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+// Initialize lazy loading when DOM is loaded
+document.addEventListener('DOMContentLoaded', initLazyLoading);
 
 // Lazy loading for images
 function initLazyLoading() {
